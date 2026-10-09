@@ -1,0 +1,22 @@
+{
+  "name": "cees-deliveries-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cee's Deliveries - Next.js frontend for a full-stack delivery platform.",
+  "scripts": {
+    "dev": "next dev -p 5173",
+    "build": "next build",
+    "start": "next start -p 5173",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "lucide-react": "^0.545.0",
+    "next": "^16.4.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.14",
+    "tailwindcss": "^4.1.14"
+  }
+}
