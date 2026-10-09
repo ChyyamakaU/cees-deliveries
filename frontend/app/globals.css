@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette */
+  --color-brand: #4f35d5;
+  --color-brand-dark: #3a259f;
+  --color-coral: #ff5b61;
+  --color-coral-dark: #e8444a;
+  --color-solar: #ffc247;
+  --color-violet: #8b5cf6;
+  --color-lilac: #f0ecff;
+  --color-vanilla: #fff9f0;
+  --color-ink: #211d35;
+  --color-ink-soft: #4b4663;
+
+  /* Tints & shades (kept central so components never hard-code hex) */
+  --color-coral-tint: #fff2f1;
+  --color-coral-soft: #ff8a5b;
+  --color-solar-tint: #fff7e6;
+  --color-solar-deep: #ffb01f;
+  --color-solar-ink: #8a5a00;
+  --color-mist-tint: #f4f1ff;
+
+  /* Functional status palette — deliberately distinct from the brand colours */
+  --color-pending: #b45309;
+  --color-pending-bg: #fef3c7;
+  --color-info: #1d4ed8;
+  --color-info-bg: #dbeafe;
+  --color-transit: #0369a1;
+  --color-transit-bg: #e0f2fe;
+  --color-delivered: #15803d;
+  --color-delivered-bg: #dcfce7;
+  --color-failed: #be123c;
+  --color-failed-bg: #ffe4e6;
+
+  /* Kept for the "delivered" hero badge */
+  --color-success: #16a34a;
+
+  /* Typography */
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+
+  /* Radii */
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-vanilla);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-brand) 22%, transparent);
+  }
+}
+
+@layer utilities {
+  .text-gradient-brand {
+    background-image: linear-gradient(120deg, #4f35d5 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-grid-soft {
+    background-image: radial-gradient(circle at 1px 1px, rgba(33, 29, 53, 0.07) 1px, transparent 0);
+    background-size: 26px 26px;
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float-y-slow {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(2deg);
+  }
+}
+
+@keyframes drive {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-float {
+  animation: float-y 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-y-slow 8s ease-in-out infinite;
+}
+
+.animate-drive {
+  animation: drive 3.5s ease-in-out infinite;
+}
+
+.pulse-ring::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 2px solid currentColor;
+  animation: pulse-ring 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-slow,
+  .animate-drive,
+  .pulse-ring::after {
+    animation: none;
+  }
+}
