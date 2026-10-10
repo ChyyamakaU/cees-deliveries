@@ -189,20 +189,12 @@ export default function TrackDelivery() {
   }
 
   return (
-    <section id="track" className="relative overflow-hidden bg-gradient-to-br from-brand via-brand to-violet py-20 sm:py-24">
+    <section id="track" className="relative overflow-hidden bg-brand py-20 sm:py-24">
       <div
-        className="pointer-events-none absolute inset-0 opacity-30"
-        style={{
-          backgroundImage:
-            'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.35) 1px, transparent 0)',
-          backgroundSize: '26px 26px',
-        }}
+        className="pointer-events-none absolute inset-0 bg-grid-light opacity-30"
         aria-hidden="true"
       />
-      <div className="pointer-events-none absolute -right-20 -top-16 h-72 w-72 rounded-full bg-solar/25 blur-3xl" aria-hidden="true" />
-      <div className="pointer-events-none absolute -left-16 bottom-0 h-72 w-72 rounded-full bg-coral/20 blur-3xl" aria-hidden="true" />
-
-      <div className="relative mx-auto max-w-4xl px-4 sm:px-6">
+      <div className="relative mx-auto max-w-4xl px-[55px]">
         <SectionHeading
           light
           eyebrow="Track delivery"

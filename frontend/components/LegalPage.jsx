@@ -1,8 +1,8 @@
 export default function LegalPage({ title, updated, intro, sections }) {
   return (
     <main>
-      <section className="bg-gradient-to-b from-lilac/70 to-vanilla">
-        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
+      <section className="bg-lilac/50">
+        <div className="mx-auto max-w-3xl px-[55px] py-16 sm:py-20">
           <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand">
             Legal
           </p>
@@ -14,7 +14,7 @@ export default function LegalPage({ title, updated, intro, sections }) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-4 pb-20 sm:px-6">
+      <section className="mx-auto max-w-3xl px-[55px] pb-20">
         <div className="rounded-2xl border border-coral/25 bg-coral-tint p-5 text-sm text-solar-ink">
           <strong className="font-semibold">Placeholder content.</strong> This page is a
           stand-in created for the Cee&apos;s Deliveries demo build. It is not legal advice

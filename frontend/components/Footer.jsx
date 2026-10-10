@@ -21,8 +21,8 @@ const serviceLinks = [
 const supportLinks = [
   { label: 'How It Works', href: '/#how-it-works' },
   { label: 'Track Delivery', href: '/#track' },
-  { label: 'Help & Support', href: '/#help' },
-  { label: 'Become a Rider', href: '/#help' },
+  { label: 'Help & Support', href: '/help' },
+  { label: 'Become a Rider', href: '/register?role=RIDER' },
 ];
 
 /**
@@ -51,10 +51,10 @@ export default function Footer() {
     <footer className="relative bg-ink text-white">
       <div
         aria-hidden="true"
-        className="h-1.5 w-full bg-gradient-to-r from-brand via-violet to-coral"
+        className="h-1.5 w-full bg-brand"
       />
 
-      <div className="mx-auto max-w-[100rem] px-4 sm:px-6">
+      <div className="mx-auto max-w-[100rem] px-[55px]">
         <div className="grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.3fr] lg:gap-8">
           <div className="max-w-sm">
             <Logo tone="light" />

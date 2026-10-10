@@ -89,7 +89,7 @@ function RoleConsoleCard({ user }) {
   const isRider = user.role === 'RIDER';
   return (
     <div className="rounded-3xl border border-ink/10 bg-white p-8 text-center">
-      <span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-brand to-violet text-white shadow-lg shadow-brand/25">
+      <span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-brand text-white shadow-lg shadow-brand/25">
         {isRider ? <Bike className="h-6 w-6" /> : <ShieldCheck className="h-6 w-6" />}
       </span>
       <h2 className="mt-5 font-display text-xl font-bold text-ink">

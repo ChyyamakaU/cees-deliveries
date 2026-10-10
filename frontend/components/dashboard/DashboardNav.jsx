@@ -38,8 +38,8 @@ export default function DashboardNav() {
                 aria-current={active ? 'page' : undefined}
                 className={`flex items-center gap-2.5 rounded-2xl px-4 py-3 text-sm font-semibold transition-colors ${
                   active
-                    ? 'bg-brand text-white shadow-lg shadow-brand/25'
-                    : 'text-ink-soft hover:bg-lilac hover:text-brand'
+                    ? 'bg-coral text-white shadow-lg shadow-coral/25'
+                    : 'text-ink-soft hover:bg-coral-tint hover:text-coral'
                 }`}
               >
                 <Icon className="h-4.5 w-4.5" aria-hidden="true" />

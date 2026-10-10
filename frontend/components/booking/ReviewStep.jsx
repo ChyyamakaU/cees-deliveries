@@ -32,7 +32,7 @@ function SectionCard({ title, onEdit, children }) {
         <button
           type="button"
           onClick={onEdit}
-          className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-semibold text-brand transition-colors hover:bg-lilac"
+          className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-semibold text-coral transition-colors hover:bg-coral-tint"
         >
           <Pencil className="h-3.5 w-3.5" aria-hidden="true" />
           Edit
@@ -99,7 +99,7 @@ export default function ReviewStep({ values, quote, quoteLoading, quoteError, on
         ) : null}
       </SectionCard>
 
-      <div className="rounded-2xl border border-brand/20 bg-gradient-to-br from-lilac to-white p-5">
+      <div className="rounded-2xl border border-brand/20 bg-lilac/50 p-5">
         <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-brand">
           <CalendarClock className="h-4 w-4" aria-hidden="true" />
           Estimated price

@@ -84,8 +84,8 @@ export default function DeliveriesList() {
               aria-pressed={status === filter.value}
               className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
                 status === filter.value
-                  ? 'bg-brand text-white'
-                  : 'border border-ink/12 bg-white text-ink-soft hover:border-brand/40 hover:text-brand'
+                  ? 'bg-coral text-white'
+                  : 'border border-ink/12 bg-white text-ink-soft hover:border-coral/40 hover:text-coral'
               }`}
             >
               {filter.label}

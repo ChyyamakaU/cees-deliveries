@@ -167,7 +167,7 @@ export default function DeliveryDetail({ id }) {
             <button
               type="button"
               onClick={copyCode}
-              className="grid h-8 w-8 place-items-center rounded-lg border border-ink/12 text-ink-soft transition-colors hover:border-brand/40 hover:text-brand"
+              className="grid h-8 w-8 place-items-center rounded-lg border border-ink/12 text-ink-soft transition-colors hover:border-coral/40 hover:text-coral"
               aria-label="Copy tracking code"
             >
               {copied ? <Check className="h-4 w-4 text-delivered" aria-hidden="true" /> : <Copy className="h-4 w-4" aria-hidden="true" />}
@@ -218,7 +218,7 @@ export default function DeliveryDetail({ id }) {
         {rider ? (
           <Card title="Rider" icon={Bike}>
             <div className="flex items-center gap-3">
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-brand to-violet text-sm font-bold text-white">
+              <span className="grid h-10 w-10 place-items-center rounded-full bg-brand text-sm font-bold text-white">
                 {rider.firstName?.[0]}
                 {rider.lastName?.[0]}
               </span>

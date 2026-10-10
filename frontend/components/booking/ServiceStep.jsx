@@ -30,7 +30,7 @@ export default function ServiceStep({ values, setField, errors }) {
                 }}
                 className={`flex items-center gap-4 rounded-2xl border-2 p-4 text-left transition-all ${
                   selected
-                    ? 'border-brand bg-lilac/70 shadow-sm'
+                    ? 'border-coral bg-coral-tint shadow-sm'
                     : 'border-ink/10 bg-white hover:border-brand/40'
                 }`}
               >
@@ -41,7 +41,7 @@ export default function ServiceStep({ values, setField, errors }) {
                   <span className="block font-display font-bold text-ink">{label}</span>
                   <span className="block text-sm text-ink-soft">{blurb}</span>
                 </span>
-                {selected ? <Check className="ml-auto h-5 w-5 text-brand" aria-hidden="true" /> : null}
+                {selected ? <Check className="ml-auto h-5 w-5 text-coral" aria-hidden="true" /> : null}
               </button>
             );
           })}
@@ -64,7 +64,7 @@ export default function ServiceStep({ values, setField, errors }) {
                 onClick={() => setField('packageSize', value)}
                 className={`rounded-2xl border-2 p-4 text-left transition-all ${
                   selected
-                    ? 'border-brand bg-lilac/70 shadow-sm'
+                    ? 'border-coral bg-coral-tint shadow-sm'
                     : 'border-ink/10 bg-white hover:border-brand/40'
                 }`}
               >

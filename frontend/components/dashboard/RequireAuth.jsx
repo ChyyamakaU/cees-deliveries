@@ -18,7 +18,7 @@ export default function RequireAuth({ children, roles }) {
 
   if (loading || !user) {
     return (
-      <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6">
+      <div className="mx-auto max-w-3xl px-[55px] py-24">
         <LoadingState label="Loading your account…" />
       </div>
     );
@@ -26,7 +26,7 @@ export default function RequireAuth({ children, roles }) {
 
   if (roles && !roles.includes(user.role)) {
     return (
-      <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6">
+      <div className="mx-auto max-w-3xl px-[55px] py-24">
         <EmptyState
           icon={ShieldX}
           title="You don’t have access to this area"

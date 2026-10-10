@@ -12,10 +12,10 @@ export default function ServiceCard({
   cta,
   href = '/book',
   card = 'bg-white border-ink/10 hover:border-brand/40',
-  iconTile = 'from-brand to-violet',
+  iconTile = 'bg-brand',
   iconText = 'text-white',
   glow = 'bg-brand/20',
-  button = 'bg-brand text-white group-hover:bg-brand-dark',
+  button = 'bg-coral text-white group-hover:bg-coral-dark',
   badge,
 }) {
   return (
@@ -29,7 +29,7 @@ export default function ServiceCard({
 
       <div className="relative flex items-start justify-between">
         <span
-          className={`grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br shadow-lg ${iconText} ${iconTile}`}
+          className={`grid h-14 w-14 place-items-center rounded-2xl shadow-lg ${iconText} ${iconTile}`}
         >
           <Icon className="h-7 w-7" strokeWidth={2.1} aria-hidden="true" />
         </span>

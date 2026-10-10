@@ -34,7 +34,7 @@ const STEPS = [
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="relative overflow-hidden bg-white py-20 sm:py-24">
-      <div className="mx-auto max-w-[100rem] px-4 sm:px-6">
+      <div className="mx-auto max-w-[100rem] px-[55px]">
         <SectionHeading
           eyebrow="How it works"
           title="Booked in three simple steps"
@@ -44,7 +44,7 @@ export default function HowItWorks() {
         <div className="relative mt-16">
           {/* connecting line (desktop) */}
           <div
-            className="absolute left-0 right-0 top-8 hidden h-px bg-[repeating-linear-gradient(90deg,rgba(33,29,53,0.18)_0_10px,transparent_10px_20px)] lg:block"
+            className="absolute left-0 right-0 top-8 hidden border-t border-dashed border-ink/20 lg:block"
             aria-hidden="true"
           />
 

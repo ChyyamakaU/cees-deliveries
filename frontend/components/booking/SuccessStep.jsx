@@ -52,7 +52,7 @@ export default function SuccessStep({ delivery, onReset }) {
           <button
             type="button"
             onClick={copy}
-            className="grid h-9 w-9 place-items-center rounded-xl border border-ink/12 text-ink-soft transition-colors hover:border-brand/40 hover:text-brand"
+            className="grid h-9 w-9 place-items-center rounded-xl border border-ink/12 text-ink-soft transition-colors hover:border-coral/40 hover:text-coral"
             aria-label="Copy tracking code"
           >
             {copied ? (

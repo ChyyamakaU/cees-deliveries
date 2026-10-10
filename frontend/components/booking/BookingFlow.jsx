@@ -28,7 +28,7 @@ function SignInGate({ serviceKey }) {
   const redirect = encodeURIComponent(`/book${query}`);
   return (
     <div className="mx-auto max-w-md rounded-3xl border border-ink/10 bg-white/95 p-8 text-center shadow-xl shadow-ink/5 sm:p-10">
-      <span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-brand to-violet text-white shadow-lg shadow-brand/25">
+      <span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-brand text-white shadow-lg shadow-brand/25">
         <LockKeyhole className="h-6 w-6" aria-hidden="true" />
       </span>
       <h1 className="mt-6 font-display text-2xl font-extrabold text-ink">Sign in to book</h1>
@@ -154,7 +154,7 @@ export default function BookingFlow() {
 
   if (loading) {
     return (
-      <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6">
+      <div className="mx-auto max-w-3xl px-[55px] py-20">
         <LoadingState label="Checking your session…" />
       </div>
     );
@@ -164,7 +164,7 @@ export default function BookingFlow() {
     return (
       <section className="relative overflow-hidden">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-grid-soft opacity-60" />
-        <div className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24">
+        <div className="relative mx-auto max-w-4xl px-[55px] py-16 sm:py-24">
           <SignInGate serviceKey={getService(initialService)?.key} />
         </div>
       </section>
@@ -175,7 +175,7 @@ export default function BookingFlow() {
     <section className="relative overflow-hidden">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-grid-soft opacity-60" />
 
-      <div className="relative mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
+      <div className="relative mx-auto max-w-4xl px-[55px] py-12 sm:py-16">
         <header className="text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand">
             Book a delivery

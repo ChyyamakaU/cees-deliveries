@@ -2,12 +2,12 @@
 
 @theme {
   /* Brand palette */
-  --color-brand: #4f35d5;
-  --color-brand-dark: #3a259f;
+  --color-brand: #211d35;
+  --color-brand-dark: #12101d;
   --color-coral: #ff5b61;
   --color-coral-dark: #e8444a;
   --color-solar: #ffc247;
-  --color-violet: #8b5cf6;
+  --color-violet: #211D35;
   --color-lilac: #f0ecff;
   --color-vanilla: #fff9f0;
   --color-ink: #211d35;
@@ -63,15 +63,13 @@
 }
 
 @layer utilities {
-  .text-gradient-brand {
-    background-image: linear-gradient(120deg, #4f35d5 0%, #8b5cf6 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  .bg-grid-soft {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26'%3E%3Ccircle cx='1.5' cy='1.5' r='1' fill='%23211d35' fill-opacity='0.07'/%3E%3C/svg%3E");
+    background-size: 26px 26px;
   }
 
-  .bg-grid-soft {
-    background-image: radial-gradient(circle at 1px 1px, rgba(33, 29, 53, 0.07) 1px, transparent 0);
+  .bg-grid-light {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26'%3E%3Ccircle cx='1.5' cy='1.5' r='1' fill='%23ffffff' fill-opacity='0.35'/%3E%3C/svg%3E");
     background-size: 26px 26px;
   }
 }

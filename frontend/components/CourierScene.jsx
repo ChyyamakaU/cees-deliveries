@@ -7,21 +7,6 @@ export default function CourierScene({ className = '' }) {
       aria-label="A Cee's Deliveries van carrying food, groceries and parcels along a route"
       fill="none"
     >
-      <defs>
-        <linearGradient id="cs-van" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#8B5CF6" />
-          <stop offset="100%" stopColor="#4F35D5" />
-        </linearGradient>
-        <linearGradient id="cs-glass" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#E9F1FF" />
-          <stop offset="100%" stopColor="#BBD4FF" />
-        </linearGradient>
-        <radialGradient id="cs-glow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#FFC247" stopOpacity="0.9" />
-          <stop offset="100%" stopColor="#FFC247" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-
       {/* backdrop */}
       <circle cx="268" cy="186" r="168" fill="#ffffff" fillOpacity="0.08" />
       <circle cx="268" cy="186" r="118" fill="#ffffff" fillOpacity="0.06" />
@@ -87,7 +72,7 @@ export default function CourierScene({ className = '' }) {
       {/* van body */}
       <path
         d="M60 300 V190 q0-26 26-26 H300 q10 0 16 8 l58 78 q7 9 7 20 v30 q0 20-20 20 H80 q-20 0-20-20 Z"
-        fill="url(#cs-van)"
+        fill="#211D35"
       />
 
       {/* cargo panel */}
@@ -118,17 +103,17 @@ export default function CourierScene({ className = '' }) {
       </g>
 
       {/* windshield */}
-      <path d="M306 184 L352 236 L306 236 Z" fill="url(#cs-glass)" />
+      <path d="M306 184 L352 236 L306 236 Z" fill="#C9DDFF" />
       {/* driver silhouette */}
       <circle cx="330" cy="210" r="10" fill="#211D35" />
       <path d="M316 236 q14-16 28 0 Z" fill="#211D35" />
 
       {/* headlight */}
-      <circle cx="392" cy="268" r="22" fill="url(#cs-glow)" />
+      <circle cx="392" cy="268" r="22" fill="#FFC247" fillOpacity="0.25" />
       <rect x="384" y="260" width="18" height="16" rx="8" fill="#FFC247" />
 
       {/* bumper */}
-      <rect x="404" y="280" width="16" height="30" rx="7" fill="#3A259F" />
+      <rect x="404" y="280" width="16" height="30" rx="7" fill="#12101D" />
 
       {/* floating parcel top-left */}
       <g className="animate-float-slow" style={{ transformBox: 'fill-box', transformOrigin: 'center' }}>
@@ -140,7 +125,7 @@ export default function CourierScene({ className = '' }) {
       <g className="animate-float" style={{ transformBox: 'fill-box', transformOrigin: 'center' }}>
         <path d="M418 150 a14 14 0 0 1 28 0" stroke="#F0ECFF" strokeWidth="4" fill="none" />
         <path d="M414 150 h36 l5 40 h-46 Z" fill="#F0ECFF" />
-        <circle cx="432" cy="168" r="5" fill="#8B5CF6" />
+        <circle cx="432" cy="168" r="5" fill="#211D35" />
       </g>
     </svg>
   );

@@ -8,7 +8,7 @@ export const metadata = {
 export default function DashboardLayout({ children }) {
   return (
     <RequireAuth>
-      <div className="mx-auto max-w-[100rem] px-4 py-10 sm:px-6 sm:py-14">
+      <div className="mx-auto max-w-[100rem] px-[55px] py-10 sm:py-14">
         <div className="grid gap-8 lg:grid-cols-[240px_1fr] lg:gap-12">
           <DashboardNav />
           <div className="min-w-0">{children}</div>

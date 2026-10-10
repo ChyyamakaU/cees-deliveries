@@ -3,7 +3,17 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { ArrowRight, ChevronDown, LogOut, Menu, User, X } from 'lucide-react';
+import {
+  ArrowRight,
+  Bike,
+  ChevronDown,
+  LayoutDashboard,
+  LogOut,
+  Menu,
+  ShieldCheck,
+  User,
+  X,
+} from 'lucide-react';
 import Logo from './Logo';
 import { useAuth } from '@/context/AuthContext';
 
@@ -12,7 +22,7 @@ const NAV_LINKS = [
   { label: 'Services', href: '/#services' },
   { label: 'Track Delivery', href: '/#track' },
   { label: 'How It Works', href: '/#how-it-works' },
-  { label: 'Help', href: '/#help' },
+  { label: 'Help', href: '/help' },
 ];
 
 function initials(user) {
@@ -67,7 +77,7 @@ export default function Navbar() {
           : 'border-b border-transparent bg-transparent'
       }`}
     >
-      <nav className="mx-12 flex h-[72px] max-w-[100rem] items-center justify-between gap-6 px-4 sm:px-6">
+      <nav className="mx-auto flex h-[72px] max-w-[100rem] items-center justify-between gap-6 px-[55px]">
         <Logo />
 
         <ul className="hidden items-center gap-1 lg:flex">
@@ -78,7 +88,7 @@ export default function Navbar() {
                 className="group relative rounded-full px-4 py-2 text-lg font-semibold text-ink-soft transition-colors hover:text-brand"
               >
                 {link.label}
-                <span className="absolute inset-x-4 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full bg-gradient-to-r from-brand to-violet transition-transform duration-300 group-hover:scale-x-100" />
+                <span className="absolute inset-x-4 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full bg-brand transition-transform duration-300 group-hover:scale-x-100" />
               </Link>
             </li>
           ))}
@@ -96,7 +106,7 @@ export default function Navbar() {
                 aria-expanded={menuOpen}
                 className="flex items-center gap-2 rounded-full border border-ink/10 bg-white py-1.5 pl-1.5 pr-3 text-sm font-semibold text-ink shadow-sm transition-colors hover:border-brand/40"
               >
-                <span className="grid h-8 w-8 place-items-center rounded-full bg-gradient-to-br from-brand to-violet text-xs font-bold text-white">
+                <span className="grid h-8 w-8 place-items-center rounded-full bg-brand text-xs font-bold text-white">
                   {initials(user)}
                 </span>
                 <span className="max-w-[7rem] truncate">{user.firstName}</span>
@@ -120,9 +130,37 @@ export default function Navbar() {
                       {user.role}
                     </span>
                   </div>
-                  <div className="mt-1.5 rounded-xl px-4 py-3 text-sm text-ink-soft">
-                    Dashboard coming soon.
-                  </div>
+                  <Link
+                    href="/dashboard"
+                    role="menuitem"
+                    onClick={() => setMenuOpen(false)}
+                    className="mt-1.5 flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-ink transition-colors hover:bg-coral-tint hover:text-coral"
+                  >
+                    <LayoutDashboard className="h-4 w-4" aria-hidden="true" />
+                    Dashboard
+                  </Link>
+                  {user.role === 'RIDER' ? (
+                    <Link
+                      href="/rider"
+                      role="menuitem"
+                      onClick={() => setMenuOpen(false)}
+                      className="flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-ink transition-colors hover:bg-coral-tint hover:text-coral"
+                    >
+                      <Bike className="h-4 w-4" aria-hidden="true" />
+                      Rider hub
+                    </Link>
+                  ) : null}
+                  {user.role === 'ADMIN' ? (
+                    <Link
+                      href="/admin"
+                      role="menuitem"
+                      onClick={() => setMenuOpen(false)}
+                      className="flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-ink transition-colors hover:bg-coral-tint hover:text-coral"
+                    >
+                      <ShieldCheck className="h-4 w-4" aria-hidden="true" />
+                      Admin console
+                    </Link>
+                  ) : null}
                   <button
                     type="button"
                     role="menuitem"
@@ -162,7 +200,7 @@ export default function Navbar() {
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
-          className="grid h-11 w-11 place-items-center rounded-2xl border border-ink/10 bg-white text-ink shadow-sm transition-colors hover:border-brand/30 hover:text-brand lg:hidden"
+          className="grid h-11 w-11 place-items-center rounded-2xl border border-ink/10 bg-white text-ink shadow-sm transition-colors hover:border-coral/30 hover:text-coral lg:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -173,13 +211,13 @@ export default function Navbar() {
           open ? 'max-h-[34rem] border-t opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <ul className="mx-auto max-w-[100rem] space-y-1 px-4 py-4 sm:px-6">
+        <ul className="mx-auto max-w-[100rem] space-y-1 px-[55px] py-4">
           {NAV_LINKS.map((link) => (
             <li key={link.label}>
               <Link
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block rounded-2xl px-4 py-3 text-base font-semibold text-ink transition-colors hover:bg-lilac hover:text-brand"
+                className="block rounded-2xl px-4 py-3 text-base font-semibold text-ink transition-colors hover:bg-coral-tint hover:text-coral"
               >
                 {link.label}
               </Link>
@@ -190,7 +228,7 @@ export default function Navbar() {
             {user ? (
               <div className="space-y-3 rounded-2xl bg-white p-3 shadow-sm">
                 <div className="flex items-center gap-3">
-                  <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-brand to-violet text-sm font-bold text-white">
+                  <span className="grid h-10 w-10 place-items-center rounded-full bg-brand text-sm font-bold text-white">
                     {initials(user)}
                   </span>
                   <div className="min-w-0">
@@ -200,10 +238,40 @@ export default function Navbar() {
                     <p className="truncate text-sm text-ink-soft">{user.email}</p>
                   </div>
                 </div>
+                <div className="grid gap-1">
+                  <Link
+                    href="/dashboard"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-coral-tint hover:text-coral"
+                  >
+                    <LayoutDashboard className="h-4 w-4" aria-hidden="true" />
+                    Dashboard
+                  </Link>
+                  {user.role === 'RIDER' ? (
+                    <Link
+                      href="/rider"
+                      onClick={() => setOpen(false)}
+                      className="flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-coral-tint hover:text-coral"
+                    >
+                      <Bike className="h-4 w-4" aria-hidden="true" />
+                      Rider hub
+                    </Link>
+                  ) : null}
+                  {user.role === 'ADMIN' ? (
+                    <Link
+                      href="/admin"
+                      onClick={() => setOpen(false)}
+                      className="flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-coral-tint hover:text-coral"
+                    >
+                      <ShieldCheck className="h-4 w-4" aria-hidden="true" />
+                      Admin console
+                    </Link>
+                  ) : null}
+                </div>
                 <button
                   type="button"
                   onClick={handleLogout}
-                  className="flex w-full items-center justify-center gap-2 rounded-full bg-ink px-4 py-3 text-sm font-bold text-white transition-colors hover:bg-brand"
+                  className="flex w-full items-center justify-center gap-2 rounded-full bg-coral px-4 py-3 text-sm font-bold text-white transition-colors hover:bg-coral-dark"
                 >
                   <LogOut className="h-4 w-4" aria-hidden="true" />
                   Log out
@@ -214,7 +282,7 @@ export default function Navbar() {
                 <Link
                   href="/login"
                   onClick={() => setOpen(false)}
-                  className="flex-1 rounded-full border border-ink/12 px-4 py-3 text-center font-semibold text-ink transition-colors hover:border-brand/40 hover:text-brand"
+                  className="flex-1 rounded-full border border-ink/12 px-4 py-3 text-center font-semibold text-ink transition-colors hover:border-coral/40 hover:text-coral"
                 >
                   Log in
                 </Link>

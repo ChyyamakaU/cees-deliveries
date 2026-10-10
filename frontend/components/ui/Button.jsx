@@ -2,12 +2,12 @@ import Link from 'next/link';
 import Spinner from './Spinner';
 
 const VARIANTS = {
-  primary: 'bg-brand text-white shadow-lg shadow-brand/25 hover:bg-brand-dark hover:shadow-brand/35',
+  primary: 'bg-coral text-white shadow-lg shadow-coral/25 hover:bg-coral-dark hover:shadow-coral/35',
   accent: 'bg-coral text-white shadow-lg shadow-coral/25 hover:bg-coral-dark hover:shadow-coral/35',
-  secondary: 'border border-ink/12 bg-white text-ink hover:border-brand/40 hover:text-brand',
-  subtle: 'bg-lilac text-brand hover:bg-brand hover:text-white',
-  ghost: 'text-ink hover:bg-lilac hover:text-brand',
-  dark: 'bg-ink text-white hover:bg-brand',
+  secondary: 'border border-coral/30 bg-white text-coral hover:border-coral hover:bg-coral-tint',
+  subtle: 'bg-coral-tint text-coral hover:bg-coral hover:text-white',
+  ghost: 'text-coral hover:bg-coral-tint',
+  dark: 'bg-coral text-white hover:bg-coral-dark',
   danger: 'bg-failed-bg text-failed hover:bg-failed hover:text-white',
 };
 
@@ -39,7 +39,7 @@ export default function Button({
   const classes = [
     'inline-flex items-center justify-center gap-2 rounded-full font-bold',
     'transition-all duration-200 focus-visible:outline-none focus-visible:ring-2',
-    'focus-visible:ring-brand/50 focus-visible:ring-offset-2 focus-visible:ring-offset-vanilla',
+    'focus-visible:ring-coral/50 focus-visible:ring-offset-2 focus-visible:ring-offset-vanilla',
     'disabled:cursor-not-allowed disabled:opacity-60 disabled:shadow-none disabled:hover:translate-y-0',
     VARIANTS[variant] || VARIANTS.primary,
     SIZES[size] || SIZES.md,

@@ -7,7 +7,7 @@ export default function Logo({ className = '', tone = 'dark' }) {
       aria-label="Cee's Deliveries home"
       className={`group flex items-center gap-2.5 ${className}`}
     >
-      <span className="relative grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-brand to-violet shadow-lg shadow-brand/30 transition-transform duration-300 group-hover:-rotate-6">
+      <span className="relative grid h-10 w-10 place-items-center rounded-2xl bg-brand shadow-lg shadow-brand/30 transition-transform duration-300 group-hover:-rotate-6">
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
           <path
             d="M12 2.8 19.5 6.6v7.1L12 17.5 4.5 13.7V6.6L12 2.8Z"

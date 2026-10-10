@@ -46,7 +46,7 @@ const BENEFITS = [
 export default function Benefits() {
   return (
     <section id="help" className="relative bg-vanilla py-20 sm:py-24">
-      <div className="mx-auto max-w-[100rem] px-4 sm:px-6">
+      <div className="mx-auto max-w-[100rem] px-[55px]">
         <SectionHeading
           eyebrow="Why Cee's"
           title="Built to make delivery feel effortless"
@@ -68,7 +68,7 @@ export default function Benefits() {
           ))}
 
           {/* accent card completes the grid */}
-          <article className="relative flex h-full flex-col justify-between overflow-hidden rounded-3xl bg-gradient-to-br from-brand to-violet p-7 text-white shadow-xl shadow-brand/25">
+          <article className="relative flex h-full flex-col justify-between overflow-hidden rounded-3xl bg-brand p-7 text-white shadow-xl shadow-brand/25">
             <div
               className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-solar/30 blur-2xl"
               aria-hidden="true"
@@ -89,7 +89,7 @@ export default function Benefits() {
             </div>
             <a
               href="/register"
-              className="relative mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-brand shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-lilac"
+              className="relative mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-coral shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-coral-tint"
             >
               Get Started
               <ArrowRight className="h-4 w-4" />

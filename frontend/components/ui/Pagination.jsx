@@ -13,7 +13,7 @@ export default function Pagination({ meta, onPage }) {
         type="button"
         onClick={() => onPage(page - 1)}
         disabled={page <= 1}
-        className="inline-flex items-center gap-1.5 rounded-full border border-ink/12 bg-white px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-brand/40 hover:text-brand disabled:cursor-not-allowed disabled:opacity-50"
+        className="inline-flex items-center gap-1.5 rounded-full border border-coral/30 bg-white px-4 py-2 text-sm font-semibold text-coral transition-colors hover:border-coral hover:bg-coral-tint disabled:cursor-not-allowed disabled:opacity-50"
       >
         <ChevronLeft className="h-4 w-4" aria-hidden="true" />
         Previous
@@ -27,7 +27,7 @@ export default function Pagination({ meta, onPage }) {
         type="button"
         onClick={() => onPage(page + 1)}
         disabled={page >= totalPages}
-        className="inline-flex items-center gap-1.5 rounded-full border border-ink/12 bg-white px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-brand/40 hover:text-brand disabled:cursor-not-allowed disabled:opacity-50"
+        className="inline-flex items-center gap-1.5 rounded-full border border-coral/30 bg-white px-4 py-2 text-sm font-semibold text-coral transition-colors hover:border-coral hover:bg-coral-tint disabled:cursor-not-allowed disabled:opacity-50"
       >
         Next
         <ChevronRight className="h-4 w-4" aria-hidden="true" />

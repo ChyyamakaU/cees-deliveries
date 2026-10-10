@@ -75,7 +75,7 @@ export default function LoginForm() {
   return (
     <section className="relative overflow-hidden">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-grid-soft opacity-60" />
-      <div className="relative mx-auto max-w-md px-4 py-16 sm:px-6 sm:py-24">
+      <div className="relative mx-auto max-w-md px-[55px] py-16 sm:py-24">
         <div className="rounded-3xl border border-ink/10 bg-white/95 p-8 shadow-xl shadow-ink/5 backdrop-blur-xl sm:p-10">
           <header className="text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand">
@@ -118,7 +118,7 @@ export default function LoginForm() {
                 <button
                   type="button"
                   onClick={() => setShow((s) => !s)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-ink-soft transition-colors hover:text-brand"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-ink-soft transition-colors hover:text-coral"
                   aria-label={show ? 'Hide password' : 'Show password'}
                 >
                   {show ? <EyeOff className="h-4.5 w-4.5" /> : <Eye className="h-4.5 w-4.5" />}
@@ -127,7 +127,7 @@ export default function LoginForm() {
             />
 
             <div className="flex items-center justify-end">
-              <Link href="/#help" className="text-sm font-semibold text-brand underline-offset-4 hover:underline">
+              <Link href="/help" className="text-sm font-semibold text-brand underline-offset-4 hover:underline">
                 Forgot password?
               </Link>
             </div>

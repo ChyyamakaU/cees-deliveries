@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="absolute left-1/3 top-0 h-64 w-64 rounded-full bg-solar/15 blur-3xl" />
       </div>
 
-      <div className="relative mx-12 grid max-w-[100rem] items-center pt-0 md:pt-14 px-4 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-10">
+      <div className="relative mx-auto grid max-w-[100rem] items-center pt-0 md:pt-14 px-[55px] lg:grid-cols-[1.05fr_1fr] lg:gap-10">
     
         <div className="max-w-2xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-brand/15 bg-lilac px-4 py-2 text-sm font-semibold text-brand">
@@ -39,8 +39,8 @@ export default function Hero() {
           <h1 className="mt-6 font-display text-xl font-extrabold leading-[1.04] tracking-tight text-ink sm:text-6xl lg:text-[4.1rem]">
             Whatever you need.
             <br />
-            <span className="text-gradient-brand text-5xl">Wherever it needs to </span>
-            <span className="relative whitespace-nowrap text-gradient-brand">
+            <span className="text-brand text-5xl">Wherever it needs to </span>
+            <span className="relative whitespace-nowrap text-brand">
               go.
               <svg
                 className="absolute -bottom-3 left-0 w-full"
@@ -67,14 +67,14 @@ export default function Hero() {
           <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a
               href="/book"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand px-7 py-4 text-base font-bold text-white shadow-xl shadow-brand/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-dark hover:shadow-2xl hover:shadow-brand/40"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-coral px-7 py-4 text-base font-bold text-white shadow-xl shadow-coral/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-coral-dark hover:shadow-2xl hover:shadow-coral/40"
             >
               Book a Delivery
               <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
             <a
               href="#track"
-              className="group inline-flex items-center justify-center gap-2 rounded-full border border-ink/12 bg-white px-7 py-4 text-base font-bold text-ink shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/40 hover:text-brand hover:shadow-lg"
+              className="group inline-flex items-center justify-center gap-2 rounded-full border border-ink/12 bg-white px-7 py-4 text-base font-bold text-ink shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-coral/40 hover:text-coral hover:shadow-lg"
             >
               <Search className="h-5 w-5 text-coral" />
               Track My Delivery

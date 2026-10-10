@@ -134,6 +134,18 @@ export function acceptRiderJob(id) {
   return apiRequest(`/rider/jobs/${id}/accept`, { method: 'POST' });
 }
 
+export function listRiderDeliveries({ status, page = 1, limit = 10 } = {}) {
+  const query = new URLSearchParams();
+  if (status) query.set('status', status);
+  query.set('page', page);
+  query.set('limit', limit);
+  return apiList(`/rider/deliveries?${query.toString()}`);
+}
+
+export function listRiderHistory({ page = 1, limit = 10 } = {}) {
+  return apiList(`/rider/deliveries/history?page=${page}&limit=${limit}`);
+}
+
 export function riderUpdateStatus(id, status, note) {
   return apiRequest(`/rider/deliveries/${id}/status`, {
     method: 'PATCH',
@@ -162,9 +174,12 @@ export function assignDeliveryRider(id, riderId, note) {
   });
 }
 
-export function listAdminRiders({ page = 1, limit = 10, isVerified } = {}) {
+export function listAdminRiders({ page = 1, limit = 10, isVerified, availability, status, search } = {}) {
   const query = new URLSearchParams();
   if (isVerified !== undefined) query.set('isVerified', isVerified);
+  if (availability) query.set('availability', availability);
+  if (status) query.set('status', status);
+  if (search) query.set('search', search);
   query.set('page', page);
   query.set('limit', limit);
   return apiList(`/admin/riders?${query.toString()}`);
@@ -174,5 +189,22 @@ export function verifyRider(id, isVerified) {
   return apiRequest(`/admin/riders/${id}/verify`, {
     method: 'PATCH',
     body: JSON.stringify({ isVerified }),
+  });
+}
+
+export function listAdminUsers({ role, status, search, page = 1, limit = 10 } = {}) {
+  const query = new URLSearchParams();
+  if (role) query.set('role', role);
+  if (status) query.set('status', status);
+  if (search) query.set('search', search);
+  query.set('page', page);
+  query.set('limit', limit);
+  return apiList(`/admin/users?${query.toString()}`);
+}
+
+export function updateUserStatus(id, status) {
+  return apiRequest(`/admin/users/${id}/status`, {
+    method: 'PATCH',
+    body: JSON.stringify({ status }),
   });
 }
