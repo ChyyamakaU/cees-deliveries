@@ -29,6 +29,7 @@ export default function FormField({
   required = false,
   className = '',
   children,
+  endAdornment,
   ...props
 }) {
   const generatedId = useId();
@@ -75,8 +76,8 @@ export default function FormField({
         </div>
       ) : (
         <div className="relative">
-          <input {...shared} type={props.type || 'text'} className={`${controlClasses(error)} h-11 ${props.endAdornment ? 'pr-10' : ''}`} {...props} />
-          {props.endAdornment ? props.endAdornment : null}
+          <input {...shared} type={props.type || 'text'} className={`${controlClasses(error)} h-11 ${endAdornment ? 'pr-10' : ''}`} {...props} />
+          {endAdornment ? endAdornment : null}
         </div>
       )}
 
