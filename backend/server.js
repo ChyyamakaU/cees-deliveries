@@ -1,9 +1,10 @@
+/* eslint-disable no-undef */
 require('dotenv').config();
 
 const app = require('./src/app');
 const { sequelize } = require('./src/models');
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 async function start() {
   try {
