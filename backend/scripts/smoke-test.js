@@ -6,7 +6,7 @@
  * Usage:  node scripts/smoke-test.js   (server must be running)
  */
 
-const BASE_URL = process.env.API_URL || 'http://localhost:5000/api';
+const BASE_URL = process.env.API_URL || 'http://localhost:5700/api';
 
 let passed = 0;
 let failed = 0;

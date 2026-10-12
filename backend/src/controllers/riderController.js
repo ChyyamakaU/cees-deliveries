@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const asyncHandler = require('../utils/asyncHandler');
 const { ok, paginated } = require('../utils/respond');
 const { getPagination, paginatedResponse } = require('../utils/pagination');
